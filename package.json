@@ -1,0 +1,11 @@
+{
+  "name": "pi-fixglitch-main",
+  "version": "1.0.0",
+  "description": "En este repositorio deberás desarrollar tu Proyecto Integrador. Durante el Módulo 2 trabajarás principalmente en la carpeta \"front\", luego en el Módulo 3 empezarás a utilizar la carpeta \"back\" (puedes dejarla así como está por el momento).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

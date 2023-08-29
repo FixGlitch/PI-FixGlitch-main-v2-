@@ -1,0 +1,176 @@
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Logo img {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  margin-top: 250px;
+}
+
+.btncont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: -120px;
+  margin-left: 25px;
+}
+
+
+.btn {
+margin-left: 10px;
+margin-right: 10px;
+width: 130px;
+height: 40px;
+border-radius: 10px;
+padding: 10px 25px;
+font-family: 'Lato', sans-serif;
+font-weight: 500;
+background: transparent;
+cursor: pointer;
+transition: all 0.3s ease;
+position: relative;
+ box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+outline: none;
+}
+
+.btn a {
+color: #fff;
+text-decoration: none;
+}
+
+.btncont .btn {
+background-image: url(https://w0.peakpx.com/wallpaper/88/903/HD-wallpaper-green-stars-gradient-space-star.jpg);
+background: linear-gradient(0deg, rgb(87, 255, 9) 0%, rgba(255, 255, 255, 0) 100%);
+width: 130px;
+height: 40px;
+line-height: 42px;
+padding: 0;
+border: none;
+}
+.btn span {
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
+}
+.btn:before,
+.btn:after {
+position: absolute;
+content: "";
+right: 0;
+top: 0;
+background: rgba(87,255,9,1);
+transition: all 0.3s ease;
+}
+.btn:before {
+height: 0%;
+width: 2px;
+}
+.btn:after {
+width: 0%;
+height: 2px;
+}
+.btn:hover{
+ background: transparent;
+box-shadow: none;
+}
+.btn:hover:before {
+height: 100%;
+}
+.btn:hover:after {
+width: 100%;
+}
+.btn span:hover{
+ color: rgba(87,255,9,1);
+}
+.btn span:before,
+.btn span:after {
+position: absolute;
+content: "";
+left: 0;
+bottom: 0;
+ background: rgba(87,255,9,1);
+transition: all 0.3s ease;
+}
+.btn span:before {
+width: 2px;
+height: 0%;
+}
+.btn span:after {
+width: 0%;
+height: 2px;
+}
+.btn span:hover:before {
+height: 100%;
+}
+.btn span:hover:after {
+width: 100%;
+}
+
+@media (max-width: 1600px) {
+.Logo img {
+  width: 150px; 
+  height: auto; 
+  margin-top: 230px; 
+}
+.btncont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  z-index: initial;
+  margin-top: -130px;
+}
+.btn {
+  margin: 5px 0px;
+  width: auto;
+}
+}
+
+@media (max-width: 1000px) {
+.Logo img {
+  width: 150px;
+  height: auto; 
+  margin-top: 230px; 
+}
+.btncont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  z-index: initial;
+  margin-top: -130px;
+}
+.btn {
+  margin: 5px 0px;
+  width: auto;
+}
+}
+
+@media (max-width: 600px) {
+.Logo img {
+  width: 100px; 
+  height: auto; 
+  margin-top: 200px; 
+}
+.btncont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  z-index: initial;
+  margin-top: -130px;
+}
+.btn {
+  margin: 5px 0px;
+  width: auto;
+}
+}
