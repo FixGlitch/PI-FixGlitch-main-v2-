@@ -36,6 +36,7 @@ function App() {
   const onSearch = async (id) => {
     try {
       const { data } = await axios(`http://localhost:3001/character/${id}`);
+      
       if (data.name) {
         // Comprobar si el personaje ya existe en la lista
         const characterExists = characters.some((character) => character.id === data.id);
@@ -53,7 +54,7 @@ function App() {
   };
 
   const onClose = (id) => {
-    const charactersFiltered = characters.filter((character) => character.id !== id);
+    const charactersFiltered = characters.filter((character) => character.id !== Number(id));
     setCharacters(charactersFiltered);
   };
 

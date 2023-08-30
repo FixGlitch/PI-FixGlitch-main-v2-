@@ -5,7 +5,7 @@ import style from "./Cards.module.css";
 
 export default function Cards({ characters, onClose }) {
   return (
-    <div className={style.flexCards}>
+    <div className={style.cardsContainer}>
       {characters.map(({ id, name, status, specie, gender, origin, image }) => {
         return (
           <div className={style.contenedorCard}>

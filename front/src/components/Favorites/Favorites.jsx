@@ -18,8 +18,7 @@ const Favorites = ({ myFavorites }) => {
   };
 
   return (
-    <div>
-      {/* Sección de filtros */}
+    <div >
       <div className={styles.filtersContainer}>
         <div>
           <label htmlFor='order'>Order</label>
@@ -40,8 +39,6 @@ const Favorites = ({ myFavorites }) => {
           </select>
         </div>
       </div>
-
-      {/* Contenedor de favoritos */}
       <div className={styles.favContainer}>
         {myFavorites?.map((fav) => (
           <Card
@@ -51,7 +48,6 @@ const Favorites = ({ myFavorites }) => {
             species={fav.species}
             gender={fav.gender}
             image={fav.image}
-            onClose={fav.onClose}
           />
         ))}
       </div>

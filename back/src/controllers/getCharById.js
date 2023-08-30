@@ -5,7 +5,7 @@ const getCharById = async (req, res) => {
     try {
         const { id } = req.params;
         const response = await axios.get(`${URL}/${id}`);
-        const { name, gender, origin, status, image, species } = response.data;
+        const { name, gender, origin, status, image, specie } = response.data;
         let character = {
             id,
             name,
@@ -13,7 +13,7 @@ const getCharById = async (req, res) => {
             origin,
             status,
             image,
-            species
+            specie
         };
         return character.name ? res.json(character) : res.status(404).send('Not Found');
     } catch (error) {

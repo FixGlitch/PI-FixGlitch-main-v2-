@@ -32,13 +32,14 @@ export const removeFav = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.delete(endpoint);
-      if (!data.length) throw Error('No hay favoritos');
+      console.log(data);
       dispatch({
         type: REMOVE_FAV,
         payload: data,
       });
     } catch (error) {
       console.error(error);
+      throw error;
     }
   };
 };

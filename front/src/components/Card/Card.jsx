@@ -37,7 +37,7 @@ function Card({
         setIsFav(true);
       }
     });
-  }, [myFavorites]);
+  }, [myFavorites]);  
 
   return (
     <div key={id} className="cards">
@@ -50,6 +50,7 @@ function Card({
           <button className="btnClose" onClick={() => onClose(id)}>
             X
           </button>
+          <div>
           {isFav ? (
             <button onClick={handleFavorite}>💚</button>
           ) : (
@@ -62,6 +63,7 @@ function Card({
           <p>Specie "{specie}"</p>
           <p>Gender "{gender}"</p>
           <p>Origin "{origin}"</p>
+          </div>
         </div>
       </div>
     </div>

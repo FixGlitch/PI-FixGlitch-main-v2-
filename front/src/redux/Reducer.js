@@ -19,7 +19,7 @@ const reducer = (state = initialState, { type, payload }) => {
         ...state,
         myFavorites: payload,
         allCharactersFav: payload,
-      };
+      }
 
     case FILTER:
       const allCharactersFiltered = state.allCharactersFav.filter(
