@@ -14,14 +14,14 @@ function SearchBar({ onSearch }) {
       setId('');
     }
   };
-
+  
   return (
     <div className={style.Container}>
-    <div className={style.NavBar}>
-      <input onChange={handleChange} type="search" value={id}/>
-      <button className={style.btn} onClick={() => {onSearch(id);setId("");}}><span>Agregar</span></button>
+      <div className={style.NavBar}>
+      <input  type='search' onChange={handleChange} onKeyDown={handleKeyPress} value={id}/>
+      <button className={style.btn} onClick={() => onSearch(id) && setId('')}><span>Agregar</span></button>
       <button className={style.btn} onClick={() => onSearch(Math.floor(Math.random() * 826))}><span>Random</span></button>
-    </div>
+      </div>
     </div>
   );
 }

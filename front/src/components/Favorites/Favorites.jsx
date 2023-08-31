@@ -1,24 +1,22 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
 import Card from '../Card/Card';
-import { filterCards, orderCards } from '../../redux/Actions';
 import styles from './Favorites.module.css';
+import { filterCards, orderCards } from '../../redux/Actions';
 
+import { connect, useDispatch } from 'react-redux';
 const Favorites = ({ myFavorites }) => {
   const dispatch = useDispatch();
 
-  // Manejo de ordenamiento
   const handleOrder = (event) => {
     dispatch(orderCards(event.target.value));
   };
 
-  // Manejo de filtro
   const handleFilter = (event) => {
     dispatch(filterCards(event.target.value));
   };
 
   return (
-    <div >
+    <div>
       <div className={styles.filtersContainer}>
         <div>
           <label htmlFor='order'>Order</label>
@@ -35,21 +33,27 @@ const Favorites = ({ myFavorites }) => {
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
             <option value='Genderless'>Genderless</option>
-            <option value='unknown'>Unknown Gender</option> {/* Cambio de etiqueta */}
+            <option value='unknown'>unknown</option>
           </select>
         </div>
       </div>
+
       <div className={styles.favContainer}>
-        {myFavorites?.map((fav) => (
-          <Card
+        {myFavorites?.map((fav) => {
+          return (
+            <Card
             key={fav.id}
             id={fav.id}
             name={fav.name}
+            status={fav.status}
             species={fav.species}
             gender={fav.gender}
+            origin={fav.origin.name}
             image={fav.image}
-          />
-        ))}
+            onClose={fav.onClose}
+            />
+          );
+        })}
       </div>
     </div>
   );

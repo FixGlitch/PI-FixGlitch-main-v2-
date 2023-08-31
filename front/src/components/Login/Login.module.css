@@ -58,7 +58,7 @@
   0 0 100px rgb(115, 255, 0), 0 0 25px rgb(115, 255, 0), 0 0 200px rgb(115, 255, 0);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1700px) {
   .img {
       position: absolute;
   }

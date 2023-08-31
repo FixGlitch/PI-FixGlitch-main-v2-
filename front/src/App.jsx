@@ -54,12 +54,14 @@ function App() {
   };
 
   const onClose = (id) => {
-    const charactersFiltered = characters.filter((character) => character.id !== Number(id));
+    const charactersFiltered = characters.filter(
+      (character) => character.id !== id
+    );
     setCharacters(charactersFiltered);
   };
 
   return (
-    <>
+<>
       <div className='App'>
         {location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess} />}
         <Routes>
@@ -70,7 +72,7 @@ function App() {
           <Route path='/favorites' element={<Favorites />} />
         </Routes>
       </div>
-    </>
+</>
   );
 }
 
