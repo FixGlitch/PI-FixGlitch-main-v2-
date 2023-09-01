@@ -46,17 +46,16 @@ function Card ({
         <p className="Name">{name}</p>
       </div>
       <div className="face back"><button className="btnClose" onClick={() => onClose(id)}>X</button>
-        <div>
-          {isFav ? (<button onClick={handleFavorite}>💚</button>)
-                 : (<button onClick={handleFavorite}>🤍</button>)}
+      {isFav ? (<button className='btnFavorite' onClick={handleFavorite}>💚</button>)
+             : (<button className='btnFavorite' onClick={handleFavorite}>🤍</button>)}
+        <div className="ContainerDetail">
           <Link to={`/detail/${id}`}>
-            <p>{name}</p>
+            <button className="btnDetail">{name}</button>
           </Link>
           <p>Status "{status}"</p>
           <p>Specie "{species}"</p>
           <p>Gender "{gender}"</p>
           <p>Origin "{origin}"</p>
-
         </div>
       </div>
     </div>

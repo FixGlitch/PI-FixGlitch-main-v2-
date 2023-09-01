@@ -1,8 +1,20 @@
 import style from './About.module.css';
+import img from '../../assets/About.jpg';
 
 const About = () => {
   return (
     <div className={style.container}>
+      <div className={style.aboutcard}>
+        <div className={style.meta}>
+          <div className={style.img}>
+          <img src={img}></img>
+          </div>
+        </div>
+        <div className={style.aboutdescription}>
+          <p>muy buenas! soy Lucas Blanco desarrollador fullstack, este es mi proyecto de rick and morty y sobre de que va la pagina.
+          </p>
+        </div>
+      </div>
     <div className={style.aboutcard}>
         <div className={style.meta}>
           <div className={style.img}>

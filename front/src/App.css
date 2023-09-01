@@ -10,12 +10,10 @@ html {
   text-align: center;
 }
 
-.Name {
-  text-decoration: none;
-  text-align: center;
+.Name{
   font-size: 25px;
-  margin-top: 25px;
-  color: #ffffff;
+  margin-top: auto;
+  color: #04b2ca;
   text-shadow: 0 0 25px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255),
   0 0 100px rgb(255, 255, 255), 0 0 150px rgb(255, 255, 255);
 }
@@ -50,8 +48,6 @@ html {
   overflow: hidden;
 }
 
-
-
 .cards .back {
   transform: perspective(350px) rotateY(180deg);
   background-image: url(https://w0.peakpx.com/wallpaper/88/903/HD-wallpaper-green-stars-gradient-space-star.jpg);
@@ -72,7 +68,41 @@ html {
   transform: perspective(350px) rotateY(360deg);
 }
 
+.btnFavorite {
+  font-size: 20px;
+  font-weight: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -2px;
+  margin-left: -2px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgb(84, 248, 84);
+  border-radius: 0px 0px 8px 0px;
+}
+
+.btnDetail {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -2px;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgb(84, 248, 84);
+  border-radius: 8px;
+}
+
 .btnClose {
+  font-size: 20px;
+  font-weight: 20px;
   position: absolute;
   top: 0;
   right: 0;
@@ -81,10 +111,23 @@ html {
   width: 50px;
   height: 50px;
   background-color: transparent;
-  color: #ffffff;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: rgb(84, 248, 84);
+  box-shadow: 0 0 10px rgb(84, 248, 84);
   border-radius: 0px 0px 0px 8px;
 }
+
+.ContainerDetail{
+  text-align: center;
+  margin-top: 150px;
+  box-shadow: 0 0 10px rgb(84, 248, 84);
+  border-radius: 0px 0px 0px 8px;
+}
+
+.ContainerDetail a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
 
 @media (max-width: 1600px) {
   .cards {
