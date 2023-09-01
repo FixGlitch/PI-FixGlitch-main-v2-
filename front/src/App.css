@@ -11,9 +11,10 @@ html {
 }
 
 .Name{
+  text-align: center;
   font-size: 25px;
   margin-top: auto;
-  color: #04b2ca;
+  color: rgb(84, 248, 84);
   text-shadow: 0 0 25px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255),
   0 0 100px rgb(255, 255, 255), 0 0 150px rgb(255, 255, 255);
 }
@@ -95,7 +96,7 @@ html {
   width: auto;
   height: auto;
   background-color: transparent;
-  color: #ffffff;
+  color: rgb(84, 248, 84);
   box-shadow: 0 0 10px rgb(84, 248, 84);
   border-radius: 8px;
 }
@@ -117,10 +118,11 @@ html {
 }
 
 .ContainerDetail{
+  font-weight: bold;  
   text-align: center;
   margin-top: 150px;
-  box-shadow: 0 0 10px rgb(84, 248, 84);
-  border-radius: 0px 0px 0px 8px;
+  box-shadow: 0 0 50px rgb(84, 248, 84);
+  border-radius: 8px;
 }
 
 .ContainerDetail a{
