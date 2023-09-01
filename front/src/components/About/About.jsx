@@ -10,8 +10,8 @@ const About = () => {
           <img src={img}></img>
           </div>
         </div>
-        <div className={style.aboutdescription}>
-          <p>muy buenas! soy Lucas Blanco desarrollador fullstack, este es mi proyecto de rick and morty y sobre de que va la pagina.
+        <div className={style.description}>
+          <p>muy buenas! soy Lucas Blanco desarrollador fullstack, este es mi proyecto de rick and morty , BIENVENIDOS!
           </p>
         </div>
       </div>
