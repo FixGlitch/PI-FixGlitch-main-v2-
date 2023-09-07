@@ -3,10 +3,11 @@ const morgan = require('morgan');
 const app = express();
 const router = require('./src/routes/index');
 const PORT = 3001;
+const { conn } = require('./src/DB_connection');
 
+app.use('/', router);
 app.use(express.json());
 app.use(morgan('dev'));
-
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
@@ -15,10 +16,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', router);
-
-app.listen(PORT, () => {
-  console.log('Server raised in port: ' + PORT);
+conn.sync({ force: true }).then(() => {
+  app.listen(PORT, () => {
+    console.log('Server raised in port: ' + PORT);
+  });
 });
 
 module.exports = app;
