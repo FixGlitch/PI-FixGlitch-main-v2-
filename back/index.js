@@ -4,7 +4,9 @@ const app = express();
 const router = require('./src/routes/index');
 const PORT = 3001;
 const { conn } = require('./src/DB_connection');
+const cors = require('cors');
 
+app.use(cors());
 app.use('/', router);
 app.use(express.json());
 app.use(morgan('dev'));
