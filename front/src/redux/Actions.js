@@ -1,28 +1,46 @@
 import axios from 'axios';
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from './Action-types';
 
+// export const addFav = (character) => {
+//   const endpoint = 'http://localhost:3001/fav';
+//   return async (dispatch, getState) => {
+//     try {
+//       // Verificar si el personaje ya está en la lista de favoritos
+//       const state = getState();
+//       const isCharacterInFavorites = state.myFavorites.some(
+//         (favCharacter) => favCharacter.id === character.id
+//       );
+//       if (isCharacterInFavorites) {
+//         console.log('El personaje ya está en favoritos.');
+//         return;
+//       }
+//       const { data } = await axios.post(endpoint, character);
+//       console.log(character);
+//       if (!data.length) throw Error('No hay favoritos');
+//       dispatch({
+//         type: ADD_FAV,
+//         payload: data,
+//       });
+//     } catch (error) {
+//       console.error(error.message);
+//     }
+//   };
+// };
 export const addFav = (character) => {
-  const endpoint = 'http://localhost:3001/fav';
-  return async (dispatch, getState) => {
+  const endpoint = "http://localhost:3001/fav";
+  return async (dispatch) => {
     try {
-      // Verificar si el personaje ya está en la lista de favoritos
-      const state = getState();
-      const isCharacterInFavorites = state.myFavorites.some(
-        (favCharacter) => favCharacter.id === character.id
-      );
-      if (isCharacterInFavorites) {
-        console.log('El personaje ya está en favoritos.');
-        return;
-      }
-
+      console.log(character);
       const { data } = await axios.post(endpoint, character);
-      if (!data.length) throw Error('No hay favoritos');
-      dispatch({
+      
+      if (!data.length) throw Error("no hay favoritos!");
+      return dispatch({
         type: ADD_FAV,
         payload: data,
       });
     } catch (error) {
-      console.error(error.message);
+      console.log(error);
+      console.log(error.message);
     }
   };
 };

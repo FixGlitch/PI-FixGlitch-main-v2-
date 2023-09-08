@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   next();
 });
 
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter : true }).then(() => {
   app.listen(PORT, () => {
     console.log('Server raised in port: ' + PORT);
   });
