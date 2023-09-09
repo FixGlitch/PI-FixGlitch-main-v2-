@@ -4,8 +4,10 @@ const postUser = require("../controllers/postUser");
 const postFav = require("../controllers/postFav");
 const deleteFav = require("../controllers/deleteFav");
 const router = require("express").Router();
+const bodyParser = require('body-parser')
 
 router.get("/login", login);
+
 router.post("/login", postUser);
 router.post("/fav", postFav);
 router.delete("/fav/:id", deleteFav);
